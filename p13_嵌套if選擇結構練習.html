@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+  
+  <title>p13_嵌套if選擇結構_練習</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ <script>
+  //問題如下
+    //請輸入是否是會員，輸入y是會員，輸入n不是會員
+    //請輸入消費
+    //金額會員:消費打8折，滿100元打6折;
+    //非會員:消費滿200元打9折，不滿兩百元不打折。
+    //最後輸出本次實際消費金額
+    let hyQuestion = prompt('請問是會員嗎?(y/n): ');
+    let money = parseInt(prompt('請出入消費金額:'));
+
+    //判斷是會員
+    if(hyQuestion === 'y'){       
+      //判斷會員是否滿100元
+      if(money >= 100){
+        money = money * 0.6;
+      }else{
+        money = money * 0.8;
+      }
+    }else{
+      //不是會員
+      if(money >= 200){
+        money = money * 0.9;
+      }else{
+        money = money * 1;
+      }
+      
+    }
+    console.log('本次消費金額為:'+ parseInt(money));
+ </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+        <div class="col text-left"></div>
+        <div class="col text-center fs-5">p13_嵌套if選擇結構_練習</div>
+        </div>
+      </div>
+    </div>
+  </header>  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

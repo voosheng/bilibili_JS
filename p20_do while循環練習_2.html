@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p20_do while循環練習_2</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    //小型 ATM系統
+    //存錢
+    let money = 1000 //當前帳戶金額
+    let num = 0;//定義一個循環變數，用於操作類型
+    do {
+    console.log('***歡迎使用cocoATM***');
+      num = parseInt(prompt("請輸入操作類型: 1.提款 2.存款 3.查詢餘額 0.退出交易"))
+      switch (number) {//判斷輸入的條件
+        case 1:
+          console.log("成功添加一條學生訊息");
+          break;
+        case 2:
+          console.log("成功修改一條學生訊息");
+          break;
+        case 3:
+          console.log("成0功查詢一條學生訊息");
+          break;
+        case 4:
+          console.log("成功刪除一條學生訊息");
+          break;
+      }
+    } while (number !== 0)//number不等於0，就會一直循環
+    console.log('成功退出系統!');
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p20_do while循環練習_2</div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

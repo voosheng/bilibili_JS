@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+  
+  <title>p17_var let const</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ <script>
+//var方法(定義的變數有的缺陷)
+  var a = 10;
+  var a = 100;
+ //1.使用 var 定義的變數，變數名可以重複，後面的變數會將前面的變數覆蓋掉(在其他語言不允許在同一作用域有相同變數名，但js可以，造成混淆)
+
+ console.log(b);
+ var b = 10; //undefined
+ //2.var 方式定義的變數，該變數(名)會統一提升到作用域的頂端定義，後再指定的地方才賦值
+ //所以運作玩後會顯示是以下情況
+ //var b;
+ //console.log(b); //undefined
+ //b = 10;
+
+ console.log(c); //undefined
+  if(true){
+    //3.var定義的變數，即使在指定的代碼區塊中(區域變數)，仍會提升到全域的頂端
+    var c = 20;
+  }
+  console.log('---------')
+//-----------------------------------------------------------------//  
+// let方法
+//由於使用 var 定義的變數存在以上各種問題，所以ES6開始引入新的方式定義變數
+let d = 10;
+console.log(d);
+//let d = 20; //'d' has already been declared 會報錯，在同一作用域使用 let 不可重複變數名d(不同作用域則可以)
+console.log('---------')
+// console.log(e); // Cannot access 'e' before initialization 無法在初始化e之前使用e這個變數
+let e = 50;
+//let 定義的變數，不存在提升;
+console.log(e);
+console.log('---------')
+
+//console.log(f); // f is not defined 在此作用域內找不到這個變數定義
+if(true){
+  let f = 100;
+  console.log(f); //100
+}
+//console.log(f); // f is not defined 在此作用域內找不到這個變數定義
+//-----------------------------------------------------------------//  
+// const方法
+//const方法，定義常數，常數特性:不能重複賦值，並且在定義十時就必須賦值
+const g = 200;
+console.log(g);
+g = 300; // TypeError: Assignment to constant variable. 常數不能重複賦值
+
+ </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+        <div class="col text-left"></div>
+        <div class="col text-center fs-5">p17_var let const</div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

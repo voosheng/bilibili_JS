@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+  
+  <title>p13_嵌套if選擇結構</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ <script>
+  //問題分析
+    //百米成績跑進12秒，進入決賽，否則直接 淘汰
+    //進入決賽後，再根據性別分男女組
+
+    let score = parseInt(prompt('請輸入百米成績: '));
+
+    if(score>12){
+      console.log('進入決賽!');
+      let sex = prompt('請輸入性別: ');
+      if(sex === '男'){
+        console.log('進入男子組');
+      }else{
+        console.log('進入女子組');
+      }
+    }else{
+      console.log('淘汰!');
+    }
+ </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+        <div class="col text-left"></div>
+        <div class="col text-center fs-5">p13_嵌套if選擇結構</div>
+        </div>
+      </div>
+    </div>
+  </header>  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

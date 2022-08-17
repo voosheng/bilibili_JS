@@ -1,0 +1,46 @@
+
+:root{
+    --kb-gray: #707880;
+    --kb-bg:#F3F5F7;
+    --kb-gray-light: #F8F8F8;
+    --kb-gray-bright: #B1B1B8;
+    --kb-gray-soft: #E9E9EB;
+    --kb-gray-deep: #303a40;
+    --kb-gray-dark: #333333;
+    --kb-black: #333333;
+    --kb-white: #ffffff;
+    --kb-info:#8a9199;
+    --kb-primary: #0d6efd;
+    --kb-secondary: #707880;
+    --kb-success: #19b66d;
+    --kb-warning: #FF9900;
+    --kb-danger: #e6344c;
+    --kb-purple: #3c28aa;
+    --kb-purple-darker: #36239e;
+    --kb-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --kb-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --kb-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    --pdt-primay:#E6E6FA;
+    --pdt-primay2:#A2A5E4;
+    --pdt-primay3:#6E74E0;
+    --pdt-primay-darker:#2E35AC;
+    --pdt-secondary:#F15A88;
+    --pdt-secondary-darker:#E64375;
+    --pdt-gray-light:#D4D9DE;
+    --pdt-gray-bright:#E9ECF2;
+    --pdt-gray-deep:#9E9E9E;
+    
+    
+}
+
+.bg-primay-bright-nw{
+    background-color:var(--nuwa-bg-04);
+}
+.text-white-kb{
+    fill: var(--kb-white);
+    /* background-color: var(--kb-white); */
+}
+.text-secondary-kb{
+    color: var(--pdt-secondary);
+}

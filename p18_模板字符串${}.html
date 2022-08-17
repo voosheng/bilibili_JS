@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p18_模板字符串${}</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    let name = '拳四郎';
+    let age = 20;
+    let gender = '男'
+    let job = '流浪者'
+    console.log('我叫'+name+'，今年'+age+'歲，性別是'+gender+'，目前職業是'+job); //字串變數相串接，資料量多時很麻煩
+    //使用 '' 和 "" 定義的數據是字串數據
+    //在ES6中，又加入``反引號，在反引號內可定義模板字串符，方式是${變數名}
+    console.log(`我叫${name}，今年${age}歲，性別是${gender}，目前職業是${job}`);//清晰方便
+    console.log('----------');
+    //如果字符串採用''包裹，裡面可以定義""
+    console.log('"流淚的風險"');
+    //若希望我們定義的字符串中，既包含雙引號又包括單引號，過去是採用轉譯字符的方式定義一組反斜線在引號前
+    console.log('\"愛情使人盲目\"!\'要用心去體會\'');
+    //現在可以直接在模板字符串中使用``反引號 內含雙引號 單引號
+    console.log(`"愛情使人盲目"!'要用心去體會'`);
+
+    // \轉譯字符的其他用法
+    // \t表示水平制符，等於tab鍵
+    // \n表示換行符，其實就是一個enter鍵
+    // \\表示一個\
+    console.log("愛情使人盲目!\t要用心去體會");
+    console.log("愛情使人盲目!\\要用心去體會");
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p18_模板字符串${}</div>
+    </div>
+    </div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

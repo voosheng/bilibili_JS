@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+  
+  <title>p14_多重if與嵌套if綜合題</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ <script>
+  //問題如下
+    //輸入年 月 輸出該月份有多少天
+    //閏年公式:年份能被4整除，但不能被100整除；或年份能被400整除。閏年2月份是29天，平年2月份是 28天。
+    let year = parseInt(prompt('請輸入年份: '));
+    let month = parseInt(prompt('請輸入月份: '));
+    let days = 0 //表示天數
+    
+    //算出 days 是多少
+    //
+    //判斷31天的月份
+    if(month===1 || month===3 || month===5 || month===7 || month===8 || month===10 || month===12){       
+       days = 31;
+ 
+    }else if(month===4 ||  month===6 || month===9 || month===11 )
+      //判斷30天的月份
+      {
+       days = 30;     
+    }else{
+      //進入else 就表示是2月份
+      //要判斷當前年份是否是閏年
+      if(year%4===0 && year%100!==0 || year%400===0){
+       days = 29;
+      }else{
+       days = 28;
+      }
+    }    
+console.log(year+'年' + month+'月，,有'+ days+'天');
+ </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+        <div class="col text-left"></div>
+        <div class="col text-center fs-5">p14_多重if與嵌套if綜合題</div>
+        </div>
+      </div>
+    </div>
+  </header>  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

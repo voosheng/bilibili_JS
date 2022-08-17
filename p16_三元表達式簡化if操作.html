@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+  
+  <title>p16_三元表達式簡化if操作</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+ <script>
+  //Q1
+    //如果 a大於10 b賦值100 否則b賦值200
+    let a =20;
+    let b;
+    if(a>10){ 
+      b = 100;      
+    }else{
+      b = 200;
+    }
+    console.log(b);
+    console.log('------');   
+  //進行簡寫
+  //三元表達式可以簡化基本 if-else 語句結構
+  let c = a > 10 ? 100 : 200
+  //c = a 若大於10則賦值100，否則就200。
+  //?相當於if :相當於else
+  console.log(c);
+  console.log('------');
+
+  //Q2
+  //如果 a大於10 d賦值100 如果a大於20 d賦值200 否則d賦值300
+  let d;
+  if(a>20){
+    d = 200;
+  }else if(a>10){
+    d = 100;
+  }else{
+    d = 300;
+  }
+  console.log(d);
+  console.log('------');
+   //三元表達式，也可以簡化以上多重的 if-else 語句結構，但通常不建議簡化太多(通常一層)，否則造成難以閱讀如下
+   //簡化的三元表達式通常是為了幫一變數做賦值，而不去做過多的複雜操作
+  let e = a > 20 ? 200 : (a > 10 ? 100 : 300);
+  console.log(e);
+  
+ </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+        <div class="col text-left"></div>
+        <div class="col text-center fs-5">p16_三元表達式簡化if操作</div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

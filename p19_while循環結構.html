@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p19_while循環結構</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    //業務重複操作執行的時候，就可使用循環結構。js有三種如下
+    //if  判斷條件成立，操作一次結束
+    //if(條件){
+    //  操作}
+      
+    //while 反覆重複判斷條件     
+    //while(條件){
+    //  操作}
+
+    //打印100行: 我要努力向上，不枉諸君寄望~
+    let i = 1; //定義循環變數
+    //()裡面是循環條件，條件成立，執行{}裡面的操作
+    while(i<=20){
+      console.log(`第${i}行:我要努力向上，不枉諸君寄望~`);
+      //注意:在while循環體中，必須對循環變數重新賦值，否則形成死循環(沒辦法跳出，瀏覽器會負荷過重)
+      //i = 100;//如果設定100，條件已跳出，第二次就不打印了
+      i++; //i=i+1 遞增
+    }
+    console.log("END");
+
+    
+    
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p19_while循環結構</div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

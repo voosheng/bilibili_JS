@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p20_do while循環練習_1</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    //系統菜單: 輸入 1.添加學生 2.修改學生 3.查詢學生 4.刪除學生 0.退出系統
+    let number;
+    //無條件都先循環過一次，即使number沒有任何值
+    do {
+      number = parseInt(prompt("請選擇菜單: 1.添加 2.修改 3.查詢 4.刪除 0.退出"))
+      switch (number) {//判斷輸入的條件
+        case 1:
+          console.log("成功添加一條學生訊息");
+          break;
+        case 2:
+          console.log("成功修改一條學生訊息");
+          break;
+        case 3:
+          console.log("成0功查詢一條學生訊息");
+          break;
+        case 4:
+          console.log("成功刪除一條學生訊息");
+          break;
+      }
+    } while (number !== 0)//number不等於0，就會一直循環
+    console.log('成功退出系統!');
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p20_do while循環練習_1</div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>
