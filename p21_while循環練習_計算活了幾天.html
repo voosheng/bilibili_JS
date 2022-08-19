@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p21_while循環練習_計算活了幾天.</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    //計算我活了多少天
+    //輸入相關訊息
+    let year1 = parseInt(prompt("請輸入你的出生年分:"))
+    let month1 = parseInt(prompt("請輸入你的出生月分:"))
+    let day1 = parseInt(prompt("請輸入你的出生日:"))
+    let year2 = parseInt(prompt("請輸入當前年分:"))
+    let month2 = parseInt(prompt("請輸入當前月分:"))
+    let day2 = parseInt(prompt("請輸入當前日期:"))
+    let sum = 0; //表示總天數
+//1.先算出你出生那年，還剩下多少天
+//1.1先算出你出生那年，已經過了多少天 1986/12/8
+let i = 1;//i會變，所以要判斷
+while(i<month1){
+  switch(i){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      sum+=31//以上+31天
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      sum+=30//小月+30天
+      break;
+    case 2:
+    if(year1%4===0 && year1%100!==0 || year1%400===0){
+        sum1+=29
+    }
+  }
+  i++;
+}
+
+//2.算出中間有多少整年
+//3.今年已經過去多少天
+  
+   
+    console.log(`你已經活了${sum}天，如果人生有三萬天，還剩下${30000-sum}天`);
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p21_while循環練習_計算活了幾天.</div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>

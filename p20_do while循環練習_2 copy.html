@@ -16,25 +16,35 @@
     //存錢
     let money = 1000 //當前帳戶金額
     let num = 0;//定義一個循環變數，用於操作類型
+    //do while「不管條件是否為 true」，都至少會執行一次。
     do {
     console.log('***歡迎使用cocoATM***');
-      num = parseInt(prompt("請輸入操作類型: 1.提款 2.存款 3.查詢餘額 0.退出交易"))
-      switch (number) {//判斷輸入的條件
+      num = parseInt(prompt("請輸入操作類型: 1.提款 2.存款 3.查詢餘額 0.退出交易"));
+      switch (num) {//判斷用戶的操作類型
         case 1:
-          console.log("成功添加一條學生訊息");
+          let m1 = parseInt(prompt("請輸入提款金額:"));
+          //提款金額必續小於或等於當前金額
+          if(m1<=money){
+            money -= m1 //從帳戶內扣除提款金額
+            console.log("提款成功!");
+          }else{
+            console.error("餘額不足!")
+          }          
           break;
         case 2:
-          console.log("成功修改一條學生訊息");
+          let m2 = parseInt(prompt("請輸入存款金額:"));
+          money += m2
+          console.log(`存款成功! 當前帳戶餘額:${money}元`);
           break;
         case 3:
-          console.log("成0功查詢一條學生訊息");
+          console.log(`帳戶餘額:${money}元`);
           break;
-        case 4:
-          console.log("成功刪除一條學生訊息");
-          break;
+        // default:
+        //   console.log(`您已退出交易`);          
       }
-    } while (number !== 0)//number不等於0，就會一直循環
-    console.log('成功退出系統!');
+    } while (num !== 0)//number不等於0，就會一直循環
+    console.log(`您已成功退出交易`);//等於0的狀況
+
   </script>
 </head>
 

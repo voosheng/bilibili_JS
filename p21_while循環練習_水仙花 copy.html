@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/kb-layout.css">
+
+  <title>p21_while循環練習_水仙花</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    //打印三位數內的水仙花數
+    let i = 100 //定義三位數內最小的數
+    //循環出所有的三位數
+    while(i<1000){
+      //計算出每一個三位數裡面的每個數
+      let bai = parseInt(i/100)
+      let shi = parseInt(i%100/10)
+      let ge = parseInt(i%10)
+      //判斷是不是水仙花數(數論)
+      if(i === bai*bai*bai + shi*shi*shi + ge*ge*ge){
+        console.log(i);
+      }
+      i++ //i的值每次，加1
+    }
+   
+    console.log(``);
+  </script>
+</head>
+
+<body>
+  <header class="header-title">
+    <div class="container-md ">
+      <div class="col text-left"></div>
+      <div class="col text-center fs-5">p21_while循環練習_水仙花</div>
+    </div>
+  </header>
+  <!-- <script src="js/all.js" /></script> -->
+
+  </div>
+</body>
+
+</html>
