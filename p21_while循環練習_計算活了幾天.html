@@ -23,6 +23,8 @@
     let sum = 0; //表示總天數
 //1.先算出你出生那年，還剩下多少天
 //1.1先算出你出生那年，已經過了多少天 1986/12/8
+
+let sum1 = 0;//你出生那天的那年，已經過去的天數  
 let i = 1;//i會變，所以要判斷
 while(i<month1){
   switch(i){
@@ -33,7 +35,57 @@ while(i<month1){
     case 8:
     case 10:
     case 12:
-      sum+=31//以上+31天
+      sum1+=31//大月+31天
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      sum1+=30//小月+30天
+      break;
+    case 2:
+    //判斷出生那年是否是閏年
+    if(year1%4===0 && year1%100!==0 || year1%400===0){
+      sum1+=29;//是閏年
+    }else{
+      sum1+=28;//是平年
+    }
+  }
+  i++;
+}
+sum1+=day1;//加上出生日已經是當月第幾天
+if(year1<year2){
+//1.2 再用全年天數-過去的天數，就是剩下的天數
+if(year1%4===0 && year1%100!==0 || year1%400===0){
+  //若是閏年就是366-生日
+    sum = 366 - sum1;
+}else{
+  //若是平年就是365-生日
+    sum = 365 - sum1;
+}
+}
+//2.算出中間有多少整年
+let j = year1+1;//表示你出生年分的下一年開始(整年)
+while(j<year2){
+  if(j%4===0 && j%100!==0 || j%400===0){
+    sum+=366; //閏年日
+  }else{
+    sum+=365;
+  }
+j++  
+}
+//3.今年已經過去多少天
+let k = 1;
+while(k<month2){
+  switch(k){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      sum+=31//大月+31天
       break;
     case 4:
     case 6:
@@ -42,18 +94,25 @@ while(i<month1){
       sum+=30//小月+30天
       break;
     case 2:
-    if(year1%4===0 && year1%100!==0 || year1%400===0){
-        sum1+=29
+    //判斷是否是閏年
+    if(year2%4===0 && year2%100!==0 || year2%400===0){
+      sum+=29;//是閏年
+    }else{
+      sum+=28;//是平年
     }
   }
-  i++;
+  k++;
 }
-
-//2.算出中間有多少整年
-//3.今年已經過去多少天
-  
-   
-    console.log(`你已經活了${sum}天，如果人生有三萬天，還剩下${30000-sum}天`);
+sum+=day2;//4.把過去的日子加總
+//判斷出生年跟當前年是同年的情況
+if(year1===year2){
+  sum = sum - sum1;
+}
+//判斷bug 當輸入的生日大於今天日期
+if(year1===year2 && day1>day2){
+  sum = 0;
+}
+    console.log(`你已經活了${sum}天，如果人生有三萬天，還剩下${30000-sum}天`);//5.3萬天-過去的加總就是剩下天數
   </script>
 </head>
 
